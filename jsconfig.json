@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES2024",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitAny": true,
+    "useUnknownInCatchVariables": true,
+    "skipLibCheck": true,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "lib": [ "DOM", "ESNext", "WebWorker" ],
+    "types": [ "node" ]
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    ".yarn"
+  ],
+  "typeAcquisition": { "enable": true }
+}
