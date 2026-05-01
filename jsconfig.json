@@ -10,12 +10,12 @@
     "exactOptionalPropertyTypes": true,
     "noPropertyAccessFromIndexSignature": true,
     "lib": [ "DOM", "ESNext", "WebWorker" ],
-    "types": [ "node" ]
   },
   "exclude": [
     "node_modules",
     "**/node_modules/*",
     ".yarn"
   ],
+  "include": [ "**/*.js" ],
   "typeAcquisition": { "enable": true }
 }
