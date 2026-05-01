@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name        Vintage Story | Left-Side Mod Notification Actions
 // @namespace   https://github.com/BinToss/UserScripts
+// @updateUrl   https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/Vintage%20Story%20%7C%20Left-Side%20Mod%20Notification%20Actions.user.js
 // @version     1.0.1
 // @author      BinToss
 // @icon        https://mods.vintagestory.at/web/favicon/apple-touch-icon.png
