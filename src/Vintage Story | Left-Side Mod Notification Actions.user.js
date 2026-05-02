@@ -17,28 +17,28 @@ let clearSelectedObserver;
 const notificationList = document.getElementById('notifications-list');
 if (notificationList) {
   const styleScaleIcons = document.createElement('style');
-  styleScaleIcons.innerHTML = /*css*/`
+  styleScaleIcons.innerHTML = /* css */`
   #notifications-list>label.list-entry>a>i.bx {
     font-size: 1.0em;
   }`;
   document.head.append(styleScaleIcons);
 
-  /**@type {HTMLElement|null} */
+  /** @type {HTMLElement|null} */
   const bulkActionsContainer = document.querySelector('div.content>main.innercontent.padded>h2>small');
   if (bulkActionsContainer != null) {
     bulkActionsContainer.style.float = 'left';
 
-    bulkActionsContainer.childNodes.forEach(n => {
+    bulkActionsContainer.childNodes.forEach((n) => {
       if (n.textContent.trim() === '' && n.constructor.name === 'Text')
         n.remove();
     });
 
-    /**@type {HTMLAnchorElement|null}*/
+    /** @type {HTMLAnchorElement|null} */
     const clearAll = bulkActionsContainer.children[1];
-    if (clearAll && clearAll.href?.includes('/notification/clearall'))
+    if (clearAll?.href.includes('/notification/clearall'))
       clearAll.innerHTML = '<i class="bx bxs-trash"></i>';
 
-    /**@type {HTMLElement|null}*/
+    /** @type {HTMLElement|null} */
     const clearSelected = bulkActionsContainer.children[0];
     if (clearSelected?.id === 'clear-selected') {
       clearSelected.innerHTML = '<i class="bx bxs-trash"></i>';
@@ -47,14 +47,18 @@ if (notificationList) {
         if (clearAll == null)
           return;
         for (const mutation of mutations) {
-          if (mutation.oldValue?.includes('display: none')
-            && mutation.target['style']?.['display'] !== 'none') {
+          const oldValueHasDisplayNone = true === mutation.oldValue?.includes('display: none');
+          const style = 'style' in mutation.oldValue && typeof mutation.oldValue.style === 'object'
+            ? mutation.oldValue.style
+            : null;
+          if (oldValueHasDisplayNone
+            && style?.display !== 'none') {
             // clearSelected became visible; hide clearAll
             clearAll.style.display = 'none';
           }
           else if (mutation.oldValue != null
-            && !mutation.oldValue.includes('display: none')
-            && mutation.target['style']?.display === 'none') {
+            && !oldValueHasDisplayNone
+            && style?.display === 'none') {
             // clearSelected became invisible; show clearAll
             clearAll.style.display = 'inline';
           }
@@ -65,10 +69,10 @@ if (notificationList) {
   }
 
   const listEntries = notificationList.getElementsByClassName('list-entry');
-  for (let i = 0; i < listEntries.length; i++) {
-    /**@type {HTMLElement}*/
-    const entry = listEntries[i];
-    if (entry?.getElementsByTagName('input')[0]) {
+  for (const listEntry of listEntries) {
+    /** @type {HTMLElement} */
+    const entry = listEntry;
+    if (entry.getElementsByTagName('input')[0]) {
       entry.querySelector('div.flex-spacer')?.remove();
 
       const oldActions = entry.getElementsByTagName('a');
@@ -78,12 +82,12 @@ if (notificationList) {
 
       // Why is this button doing nothing, now?
       let btnClear = document.createElement('a');
-      btnClear.classList.add('n-clear')
+      btnClear.classList.add('n-clear');
       btnClear.href = '#';
       btnClear.innerHTML = '<i class="bx bxs-trash"></i>';
 
       let btnGo = document.createElement('a');
-      btnGo.href = '/notification/' + entry.getElementsByTagName('input')[0]?.id.replace('nid-', '');
+      btnGo.href = '/notification/' + String(entry.getElementsByTagName('input')[0]?.id.replace('nid-', ''));
       btnGo.innerHTML = '<i class="bx bx-link-alt" />';
 
       entry.children[0].after(btnClear, btnGo);
