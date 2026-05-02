@@ -7,6 +7,7 @@ const scopes = {
   deps: 'Affects dependencies required at runtime.',
   'deps-dev':
     'Affects dependencies required in the dev environment or during build time.',
+  DGDGSU: 'Affects "src/Discord | Get Discord GameSDK URL.user.js".',
   eslint:
     'Affects "eslint.config.js".',
   NMMMT: 'Affects "src/Nexus Mods | Minimal Mod Title.user.js".',
