@@ -11,6 +11,7 @@
     "commitlint": "^20.5.3",
     "conventional-changelog-conventionalcommits": "^9.3.1",
     "eslint": "^10.3.0",
+    "globals": "^17.6.0",
     "husky": "^9.1.7",
     "typescript": "^6.0.3"
   },

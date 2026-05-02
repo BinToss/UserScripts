@@ -86,6 +86,7 @@ __metadata:
     commitlint: "npm:^20.5.3"
     conventional-changelog-conventionalcommits: "npm:^9.3.1"
     eslint: "npm:^10.3.0"
+    globals: "npm:^17.6.0"
     husky: "npm:^9.1.7"
     typescript: "npm:^6.0.3"
   languageName: unknown
@@ -2848,7 +2849,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^17.5.0":
+"globals@npm:^17.5.0, globals@npm:^17.6.0":
   version: 17.6.0
   resolution: "globals@npm:17.6.0"
   checksum: 10c0/cf94fb4329cc5c68cf81018fd68324f413181ee169f0235b0b33b82bc93fe7825a21beea951f83a80e8e4bbdad9c0c80515a145b5fd4b5cb52f2a80db899a93f
