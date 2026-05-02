@@ -18,7 +18,7 @@ document.title = document.title.replaceAll('&amp;', '&');
 
 const modTitle = document.querySelector('div.edit-asset>h2');
 if (modTitle) {
-  modTitle.childNodes.forEach(node => {
+  modTitle.childNodes.forEach((node) => {
     if (node instanceof Text) {
       node.data = node.data.trim();
       if (node.data.length === 0) {
@@ -32,5 +32,6 @@ if (modTitle) {
     else if (node instanceof HTMLSpanElement)
       node.innerHTML = node.innerHTML.trim();
   });
-  const titleSpan = modTitle.children[modTitle.children.length - 1];
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _titleSpan = modTitle.children[modTitle.children.length - 1];
 }
