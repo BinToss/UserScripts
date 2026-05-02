@@ -10,7 +10,8 @@
     "exactOptionalPropertyTypes": true,
     "noPropertyAccessFromIndexSignature": true,
     "lib": [ "DOM", "ESNext", "WebWorker" ],
-    "noEmit": true
+    "noEmit": true,
+    "types": [ "@types/tampermonkey" ]
   },
   "exclude": [
     "node_modules",
