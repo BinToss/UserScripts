@@ -12,22 +12,23 @@
 // ==/UserScript==
 const mainContentObserver = new MutationObserver(addInstallBtnIfMissing);
 mainContentObserver.observe(
-  document.querySelector("div.main-content.item-details-main-content"),
+  document.querySelector('div.main-content.item-details-main-content'),
   { attributes: true },
 );
 
 /** @type {MutationCallback} */
-function addInstallBtnIfMissing(mutations, observer) {
+function addInstallBtnIfMissing() {
   if (
     document.querySelector(
       '.bread-crumb-container>a.member[href="/vscode"]',
     )
   ) {
-    const uxItemAct = document.querySelector(".ux-item-action");
+    const uxItemAct = document.querySelector('.ux-item-action');
     if (!uxItemAct) {
-      console.error("ux-item-action not found");
-    } else if (!uxItemAct.querySelector(".one-click-install-container")) {
-      uxItemAct.innerHTML = /*html*/ `
+      console.error('ux-item-action not found');
+    }
+    else if (!uxItemAct.querySelector('.one-click-install-container')) {
+      uxItemAct.innerHTML = /* html */ `
         <div class="installButtonContainer">
           <div class="ms-Fabric">
             <span class="ux-oneclick-install-button-container">
@@ -47,8 +48,8 @@ function addInstallBtnIfMissing(mutations, observer) {
             </span>
           </div>
         </div>` + uxItemAct.innerHTML;
-      const style = document.createElement("style");
-      style.innerText = /*css*/ `
+      const style = document.createElement('style');
+      style.innerText = /* css */ `
 .one-click-install-container {
   display: flex;
 }
@@ -104,7 +105,7 @@ a.ms-Button.ux-button.install.ms-Button--default>div.ms-Button-flexContainer>div
   line-height: 100%;
   font-weight: 600;
 }`;
-      document.querySelector('head')?.appendChild(style)
+      document.querySelector('head')?.appendChild(style);
     }
   }
 }
