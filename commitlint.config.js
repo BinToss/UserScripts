@@ -21,12 +21,12 @@ const scopes = {
   VSCAIIM: 'Affects "src/VSCode | Add Install If Missing.user.js".',
   VSLSMNA: 'Affects "src/Vintage Story | Left-Side Mod Notification Actions.user.js".',
   VSMMT: 'Affects "src/Vintage Story | Minimal ModDB Title.user.js".',
-  VSSFH:'Affects "src/Vintage Story | Strip #follow Hash.user.js".',
+  VSSFH: 'Affects "src/Vintage Story | Strip #follow Hash.user.js".',
   VSSMTWARA: 'Affects "src/Vintage Story | Strip Mod Title Whitespace And Replace Ampersand.user.js".',
-  VSSTDH: 'Affects "src/Vintage Story | Strip #tab-description Hash.user.js".'
+  VSSTDH: 'Affects "src/Vintage Story | Strip #tab-description Hash.user.js".',
 };
 
-/**@type {import('@commitlint/types').UserConfig} */
+/** @type {import('@commitlint/types').UserConfig} */
 const config = {
   ...baseConfig,
   rules: {
