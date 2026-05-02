@@ -9,6 +9,7 @@ const scopes = {
     'Affects dependencies required in the dev environment or during build time.',
   eslint:
     'Affects "src/eslintConfig.ts", its tests, or the repo\'s ESLint config.',
+  NMSTDP: 'Affects "src/Nexus Mods | Strip tab=description Parameter.user.js".',
   package: 'Affects "package.json" or its tests.',
   README: 'Affects "README.md".',
   release: 'Reserved for release commits.',
