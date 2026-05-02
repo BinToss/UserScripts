@@ -79,11 +79,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@bintoss/userscripts@workspace:."
   dependencies:
+    "@commitlint/config-conventional": "npm:^20.5.3"
     "@commitlint/types": "npm:^20.5.0"
     "@halospv3/hce.shared-config": "npm:^3.5.2"
     "@types/node": "npm:^25.6.0"
+    commitlint: "npm:^20.5.3"
     conventional-changelog-conventionalcommits: "npm:^9.3.1"
     eslint: "npm:^10.3.0"
+    husky: "npm:^9.1.7"
     typescript: "npm:^6.0.3"
   languageName: unknown
   linkType: soft
@@ -95,7 +98,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:^20.5.0":
+"@commitlint/cli@npm:^20.5.0, @commitlint/cli@npm:^20.5.3":
   version: 20.5.3
   resolution: "@commitlint/cli@npm:20.5.3"
   dependencies:
@@ -112,7 +115,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:^20.5.0":
+"@commitlint/config-conventional@npm:^20.5.0, @commitlint/config-conventional@npm:^20.5.3":
   version: 20.5.3
   resolution: "@commitlint/config-conventional@npm:20.5.3"
   dependencies:
@@ -1890,6 +1893,18 @@ __metadata:
   version: 11.1.0
   resolution: "commander@npm:11.1.0"
   checksum: 10c0/13cc6ac875e48780250f723fb81c1c1178d35c5decb1abb1b628b3177af08a8554e76b2c0f29de72d69eef7c864d12613272a71fabef8047922bc622ab75a179
+  languageName: node
+  linkType: hard
+
+"commitlint@npm:^20.5.3":
+  version: 20.5.3
+  resolution: "commitlint@npm:20.5.3"
+  dependencies:
+    "@commitlint/cli": "npm:^20.5.3"
+    "@commitlint/types": "npm:^20.5.0"
+  bin:
+    commitlint: cli.js
+  checksum: 10c0/5bbcd41274842ee9a8a6c9d533b702d52619e9889ea7343c2fa34dec0875ba6d214acddc21ab780ea78db66152b44c4e594a4cff154f6902bd7d5ac2a2c71e35
   languageName: node
   linkType: hard
 
