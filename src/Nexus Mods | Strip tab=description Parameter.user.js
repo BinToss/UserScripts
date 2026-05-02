@@ -3,9 +3,9 @@
 // @namespace   https://github.com/BinToss/UserScripts
 // @homepageURL https://github.com/BinToss/UserScripts
 // @updateUrl   https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/Nexus%20Mods%20%7C%20Strip%20tab%3Ddescription%20Parameter.user.js
-// @version     1.0.0
+// @version     1.0.1
 // @author      BinToss
-// @icon        https://images.nexusmods.com/favicons/DeepBlue/mstile-310x310.png
+// @icon        https://www.nexusmods.com/apple-icon.png?apple-icon.b62fc276.png
 // @match       https://www.nexusmods.com/*/mods/*
 // @description 12/20/2025, 10:14:17 PM
 // The default tab of a mod's page is "description". Using a URL parameter to
