@@ -3,7 +3,7 @@
 // @namespace   https://github.com/BinToss/UserScripts
 // @homepageURL https://github.com/BinToss/UserScripts
 // @updateUrl   https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/Vintage%20Story%20%7C%20Left-Side%20Mod%20Notification%20Actions.user.js
-// @version     1.0.1
+// @version     1.0.2
 // @author      BinToss
 // @icon        https://mods.vintagestory.at/web/favicon/apple-touch-icon.png
 // @match       https://mods.vintagestory.at/notifications
@@ -41,7 +41,7 @@ if (notificationList) {
     /** @type {HTMLElement|null} */
     const clearSelected = bulkActionsContainer.children[0];
     if (clearSelected?.id === 'clear-selected') {
-      clearSelected.innerHTML = '<i class="bx bxs-trash"></i>';
+      clearSelected.classList.add('bx', 'bxs-trash');
 
       clearSelectedObserver = new MutationObserver((mutations) => {
         if (clearAll == null)
