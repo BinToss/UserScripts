@@ -3,12 +3,12 @@ import baseConfig from '@halospv3/hce.shared-config/commitlintConfig';
 const scopes = {
   CHANGELOG: 'Affects "CHANGELOG.md".',
   commitlint:
-    'Affects "src/commitlintConfig.ts", its tests, the repo\'s commitlint config, or anything else related to commitlint.',
+    'Affects "commitlint.config.js".',
   deps: 'Affects dependencies required at runtime.',
   'deps-dev':
     'Affects dependencies required in the dev environment or during build time.',
   eslint:
-    'Affects "src/eslintConfig.ts", its tests, or the repo\'s ESLint config.',
+    'Affects "eslint.config.js".',
   NMSTDP: 'Affects "src/Nexus Mods | Strip tab=description Parameter.user.js".',
   package: 'Affects "package.json" or its tests.',
   README: 'Affects "README.md".',
