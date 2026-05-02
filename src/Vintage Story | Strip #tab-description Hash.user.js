@@ -3,7 +3,7 @@
 // @namespace   https://github.com/BinToss/UserScripts
 // @homepageURL https://github.com/BinToss/UserScripts
 // @updateUrl   https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/Vintage%20Story%20%7C%20Strip%20%23tab-description%20Hash.user.js
-// @version     1.0.1
+// @version     1.0.2
 // @author      BinToss
 // @icon        https://mods.vintagestory.at/web/favicon/apple-touch-icon.png
 // @match       https://mods.vintagestory.at/*
@@ -15,14 +15,16 @@ if (window.location.hash === '#tab-description')
 window.addEventListener('hashchange', (event) => {
   if (event.newURL.includes('#tab-description')) {
     window.history.pushState({}, '', event.newURL.replace('#tab-description', ''));
-  if (window.location.hash === '#tab-description')
-    window.history.pushState({}, '', window.location.toString().replace('#tab-description', ''));
+    if (window.location.hash === '#tab-description')
+      window.history.pushState({}, '', window.location.toString().replace('#tab-description', ''));
   }
 });
 
-window.addEventListener("popstate", (e) => {
-    if(e.state){
-        document.getElementById("content").innerHTML = e.state.html;
-        document.title = e.state.pageTitle;
-    }
+window.addEventListener('popstate', (e) => {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  var state = /** @type {object?} */(e.state);
+  if ('html' in state && typeof state.html === 'string')
+    document.getElementById('content').innerHTML = state.html;
+  if ('pageTitle' in state && typeof state.pageTitle === 'string')
+    document.title = state.pageTitle;
 });
