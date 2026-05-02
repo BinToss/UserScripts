@@ -2,8 +2,8 @@
 // @name        Vintage Story | Strip #tab-description Hash
 // @namespace   https://github.com/BinToss/UserScripts
 // @homepageURL https://github.com/BinToss/UserScripts
-// @updateUrl   https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/Vintage%20Story%20%7C%20Strip%20%23tag-description%20Hash.user.js
-// @version     1.0.0
+// @updateUrl   https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/Vintage%20Story%20%7C%20Strip%20%23tab-description%20Hash.user.js
+// @version     1.0.1
 // @author      BinToss
 // @icon        https://mods.vintagestory.at/web/favicon/apple-touch-icon.png
 // @match       https://mods.vintagestory.at/*
