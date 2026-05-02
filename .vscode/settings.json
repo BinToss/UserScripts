@@ -10,6 +10,10 @@
     "**/.pnp.*": true
   },
   "eslint.nodePath": ".yarn/sdks",
+  "eslint.format.enable": true,
+  "eslint.options": {
+    "cache": true
+  },
   "js/ts.tsdk.path": ".yarn/sdks/typescript/lib",
-  "js/ts.tsdk.promptToUseWorkspaceVersion": true,
+  "js/ts.tsdk.promptToUseWorkspaceVersion": true
 }
