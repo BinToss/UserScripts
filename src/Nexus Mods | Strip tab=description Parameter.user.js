@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name        Nexus Mods | Strip tab=description Parameter
 // @namespace   https://github.com/BinToss/UserScripts
+// @homepageURL https://github.com/BinToss/UserScripts
 // @updateUrl   https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/Nexus%20Mods%20%7C%20Strip%20tab%3Ddescription%20Parameter.user.js
 // @version     1.0.0
 // @author      BinToss

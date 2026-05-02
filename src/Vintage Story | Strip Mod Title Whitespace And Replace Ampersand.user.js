@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name          Vintage Story | Strip Mod Title Whitespace And Replace Ampersand
 // @namespace     https://github.com/BinToss/UserScripts
+// @homepageURL https://github.com/BinToss/UserScripts
 // @updateUrl     https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/Vintage%20Story%20%7C%20Strip%20Mod%20Title%20Whitespace%20And%20Replace%20Ampersand.user.js
 // @version       1.1.0
 // @author        BinToss

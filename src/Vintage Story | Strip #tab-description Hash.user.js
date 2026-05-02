@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name        Vintage Story | Strip #tab-description Hash
 // @namespace   https://github.com/BinToss/UserScripts
+// @homepageURL https://github.com/BinToss/UserScripts
 // @updateUrl   https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/Vintage%20Story%20%7C%20Strip%20%23tag-description%20Hash.user.js
 // @version     1.0.0
 // @author      BinToss

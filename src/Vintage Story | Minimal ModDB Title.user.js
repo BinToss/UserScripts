@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name          Vintage Story | Minimal ModDB Title
 // @namespace     https://github.com/BinToss/UserScripts
+// @homepageURL https://github.com/BinToss/UserScripts
 // @updateUrl     https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/Vintage%20Story%20%7C%20Minimal%20ModDB%20Title.user.js
 // @version       1.0.0
 // @author        BinToss

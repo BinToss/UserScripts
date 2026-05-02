@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name        Vintage Story | Strip #follow Hash
 // @namespace   https://github.com/BinToss/UserScripts
+// @homepageURL https://github.com/BinToss/UserScripts
 // @updateUrl   https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/Vintage%20Story%20%7C%20Strip%20%23follow%20Hash.user.js
 // @version     1.0.1
 // @author      BinToss

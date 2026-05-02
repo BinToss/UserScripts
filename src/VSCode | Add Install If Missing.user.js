@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name        VSCode | Add Install If Missing
 // @namespace   https://github.com/BinToss/UserScripts
+// @homepageURL https://github.com/BinToss/UserScripts
 // @updateUrl   https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/VSCode%20%7C%20Add%20Install%20If%20Missing.user.js
 // @version     1.0.0
 // @author      BinToss
