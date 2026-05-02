@@ -3,7 +3,7 @@
 // @namespace   https://github.com/BinToss/UserScripts
 // @homepageURL https://github.com/BinToss/UserScripts
 // @updateUrl   https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/Nexus%20Mods%20%7C%20Strip%20tab%3Ddescription%20Parameter.user.js
-// @version     1.0.1
+// @version     1.0.2
 // @author      BinToss
 // @icon        https://www.nexusmods.com/apple-icon.png?apple-icon.b62fc276.png
 // @match       https://www.nexusmods.com/*/mods/*
@@ -27,26 +27,33 @@ if (window.location.search == parameter)
 // on subsequent navigations...
 
 window.addEventListener('popstate', (event) => {
+  console.log(event.state);
   if (window.location.search === parameter)
     trimParameter();
-  if (event.state) {
-    document.getElementById("content").innerHTML = event.state.html;
-    document.title = event.state.pageTitle;
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const state = /** @type {object?} */(event.state);
+  if (state != null) {
+    if ('html' in state && typeof state.html === 'string') {
+      const element = document.getElementById('content');
+      if (element) element.innerHTML = state.html;
+    }
+    if ('pageTitle' in state && typeof state.pageTitle === 'string')
+      document.title = state.pageTitle;
   }
 });
 
 // this does most of the work
 
-const observer = new MutationObserver(mutations => {
-  mutations.forEach(mutation => {
-    if (mutation.type === "attributes"
-        && mutation.attributeName === 'class'
-        && mutation.target.className === 'selected') {
+const observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (mutation.type === 'attributes'
+      && mutation.attributeName === 'class'
+      && mutation.target.className === 'selected') {
       trimParameter();
     }
   });
 });
 observer.observe(
   document.querySelector('li#mod-page-tab-description > a'),
-  { attributeFilter: ['class'] }
+  { attributeFilter: ['class'] },
 );
