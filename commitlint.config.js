@@ -18,7 +18,8 @@ const scopes = {
   VSSFH:'Affects "src/Vintage Story | Strip #follow Hash.user.js".',
   VSLSMNA: 'Affects "src/Vintage Story | Left-Side Mod Notification Actions.user.js".',
   VSMMT: 'Affects "src/Vintage Story | Minimal ModDB Title.user.js".',
-  VSSMTWARA: 'Affects "src/Vintage Story | Strip Mod Title Whitespace And Replace Ampersand.user.js".'
+  VSSMTWARA: 'Affects "src/Vintage Story | Strip Mod Title Whitespace And Replace Ampersand.user.js".',
+  VSSTDH: 'Affects "src/Vintage Story | Strip #tab-description Hash.user.js".'
 };
 
 /**@type {import('@commitlint/types').UserConfig} */
