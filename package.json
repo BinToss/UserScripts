@@ -18,6 +18,6 @@
   "scripts": {
     "prepare": "husky",
     "postinstall": "husky",
-    "test": "echo todo"
+    "test": "eslint --cache && tsc -b jsconfig.json"
   }
 }
