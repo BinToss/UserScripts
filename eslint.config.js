@@ -8,6 +8,7 @@ const config = defineConfig([
     languageOptions: {
       globals: {
         ...globals.browser,
+        ...globals.greasemonkey,
       },
     },
   },
