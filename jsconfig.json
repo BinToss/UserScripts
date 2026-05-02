@@ -10,6 +10,7 @@
     "exactOptionalPropertyTypes": true,
     "noPropertyAccessFromIndexSignature": true,
     "lib": [ "DOM", "ESNext", "WebWorker" ],
+    "noEmit": true
   },
   "exclude": [
     "node_modules",
