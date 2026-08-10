@@ -33,11 +33,16 @@ function addInstallBtnIfMissing(_mutations, _observer) {
       return;
     }
     if (!uxItemAct.querySelector('.one-click-install-container')) {
+      const extId = /\?[^&]+(&.+)?/.exec(location.search)[0];
+      if (!extId) {
+        console.error(`Failed to get extension ID from Location ${location.toString()}`);
+        return;
+      }
       uxItemAct.innerHTML = /* html */ `
         <div class="installButtonContainer">
           <div class="ms-Fabric">
             <span class="ux-oneclick-install-button-container">
-              <a href="vscode:extension/lextudio.vscode-axaml" class="ms-Button ux-button install ms-Button--default" data-is-focusable="true">
+              <a href="vscode:extension/${extId}" class="ms-Button ux-button install ms-Button--default" data-is-focusable="true">
                 <div class="ms-Button-flexContainer">
                   <div class="ms-Button-textContainer">
                     <div class="ms-Button-label" id="id__0">Install</div>
