@@ -57,7 +57,8 @@ function addInstallBtnIfMissing(_mutations, _observer) {
               </a>
             </span>
           </div>
-        </div>` + uxItemAct.innerHTML;
+        </div>`
+              + uxItemAct.innerHTML;
       const style = document.createElement('style');
       style.innerText = /* css */ `
 .one-click-install-container {
