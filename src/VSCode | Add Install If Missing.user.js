@@ -17,7 +17,8 @@ mainContentObserver.observe(
 );
 
 /** @type {MutationCallback} */
-function addInstallBtnIfMissing() {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function addInstallBtnIfMissing(_mutations, _observer) {
   if (
     document.querySelector(
       '.bread-crumb-container>a.member[href="/vscode"]',
