@@ -3,7 +3,7 @@
 // @namespace   https://github.com/BinToss/UserScripts
 // @homepageURL https://github.com/BinToss/UserScripts
 // @updateUrl   https://github.com/BinToss/UserScripts/raw/refs/heads/main/src/VSCode%20%7C%20Add%20Install%20If%20Missing.user.js
-// @version     1.0.0
+// @version     1.0.1
 // @author      BinToss
 // @icon        https://code.visualstudio.com/assets/favicon.ico
 // @match       https://marketplace.visualstudio.com/items*
