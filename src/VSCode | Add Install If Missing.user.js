@@ -30,8 +30,9 @@ function addInstallBtnIfMissing(_mutations, _observer) {
     const uxItemAct = document.querySelector('.ux-item-action');
     if (!uxItemAct) {
       console.error('ux-item-action not found');
+      return;
     }
-    else if (!uxItemAct.querySelector('.one-click-install-container')) {
+    if (!uxItemAct.querySelector('.one-click-install-container')) {
       uxItemAct.innerHTML = /* html */ `
         <div class="installButtonContainer">
           <div class="ms-Fabric">
