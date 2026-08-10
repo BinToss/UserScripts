@@ -10,6 +10,9 @@
 // @grant       none
 // @description 10/10/2025, 5:12:28 PM
 // ==/UserScript==
+
+// @run-at: (Default) (document-end)
+addInstallBtnIfMissing();
 const mainContentObserver = new MutationObserver(addInstallBtnIfMissing);
 mainContentObserver.observe(
   document.querySelector('div.main-content.item-details-main-content'),
