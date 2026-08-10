@@ -118,4 +118,7 @@ a.ms-Button.ux-button.install.ms-Button--default>div.ms-Button-flexContainer>div
       document.querySelector('head')?.appendChild(style);
     }
   }
+  else {
+    console.error(`Unable to find '.bread-crumb-container>a.member[href="/vscode"]'`);
+  }
 }
